@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#120018">
+  <title>A Little Birthday Journey 💗</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="loader">
+    <div class="loader-heart">♥</div>
+    <div class="loader-text">Creating a little surprise...</div>
+  </div>
+
+  <div class="ambient">
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <div class="orb orb-c"></div>
+    <div id="particles"></div>
+  </div>
+
+  <button class="sound-btn" id="soundBtn" aria-label="Toggle music">♫</button>
+  <audio id="bgMusic" loop preload="auto">
+    <!-- Put your music file at assets/birthday-song.mp3 -->
+    <source src="assets/birthday-song.mpeg" type="audio/mpeg">
+  </audio>
+
+  <main id="app">
+
+    <!-- CHAPTER 0 -->
+    <section class="chapter active" data-chapter="0">
+      <div class="chapter-inner center">
+        <div class="eyebrow">A tiny secret made just for you</div>
+        <h1 class="script huge">Hey, <span data-name>Jana</span> 💗</h1>
+        <p class="lead">I could have bought you flowers...</p>
+        <p class="lead strong">but I made you a little journey instead.</p>
+        <button class="primary next-btn">Begin the surprise <span>→</span></button>
+        <div class="tiny-note">Best experienced with sound + full screen ✨</div>
+        <p class="lead">Click on Music Button top of right corner.</p>
+      </div>
+    </section>
+
+    <!-- CHAPTER 1 -->
+    <section class="chapter" data-chapter="1">
+      <div class="chapter-inner center">
+        <div class="chapter-tag">Chapter 01</div>
+        <h2>Scratch to Reveal</h2>
+        <p class="sub">There is a little message hiding underneath.</p>
+
+        <div class="scratch-wrap">
+          <div class="reveal-card">
+            <div class="reveal-icon">🎂</div>
+            <p class="hand">06-05</p>
+            <p class="hand">You make ordinary days feel special.</p>
+            <span>— from someone who is lucky to know you</span>
+          </div>
+          <canvas id="scratchCanvas"></canvas>
+        </div>
+
+        <div class="scratch-hint">Use your finger and scratch the card ✨</div>
+        <button class="primary next-btn hidden" id="scratchNext">Open the next chapter →</button>
+      </div>
+    </section>
+
+    <!-- CHAPTER 2 -->
+    <section class="chapter" data-chapter="2">
+      <div class="chapter-inner">
+        <div class="chapter-tag">Chapter 02</div>
+        <h2>Little Moments, Big Memories</h2>
+        <p class="sub">Some memories don't need a special occasion to matter.</p>
+
+        <div class="memory-grid">
+          <figure class="memory-card tilt-left">
+            <div class="photo-slot"><img src="assets/photo1.jpg" alt="Memory 1" onerror="this.style.display='none'"><span></span></div>
+            <figcaption>The childhod you didn't plan.</figcaption>
+          </figure>
+          <figure class="memory-card">
+            <div class="photo-slot"><img src="assets/photo2.jpg" alt="Memory 2" onerror="this.style.display='none'"><span></span></div>
+            <figcaption>The moments wish you could replay.</figcaption>
+          </figure>
+          <figure class="memory-card tilt-right">
+            <div class="photo-slot"><img src="assets/photo3.jpg" alt="Memory 3" onerror="this.style.display='none'"><span></span></div>
+            <figcaption>The smiles that made everything better.</figcaption>
+          </figure>
+        </div>
+
+        <div class="center"><button class="primary next-btn">Keep going →</button></div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 3 -->
+    <section class="chapter" data-chapter="3">
+      <div class="chapter-inner">
+        <div class="chapter-tag">Chapter 03</div>
+        <h2>Reasons I Appreciate You</h2>
+        <p class="sub">Click on cards for...</p>
+
+        <div class="reason-grid">
+          <button class="reason" data-reason="01">
+            <span>01</span><b>Your smile</b><small>It changes the whole mood.</small>
+          </button>
+          <button class="reason" data-reason="02">
+            <span>02</span><b>Your heart</b><small>You care more than you show.</small>
+          </button>
+          <button class="reason" data-reason="03">
+            <span>03</span><b>Your chaos</b><small>Somehow, it's my favorite kind.</small>
+          </button>
+          <button class="reason" data-reason="04">
+            <span>04</span><b>Your strength</b><small>You keep moving forward.</small>
+          </button>
+        </div>
+
+        <div class="center"><button class="primary next-btn">One more thing →</button></div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 4 -->
+    <section class="chapter" data-chapter="4">
+      <div class="chapter-inner center">
+        <div class="chapter-tag">Chapter 04</div>
+        <h2>A Small Letter</h2>
+
+        <div class="letter">
+          <div class="letter-top">For <span data-name>Jana</span>,</div>
+          <p>
+            On your birthday, I just want you to know that your presence has a way
+            of making life feel warmer, funnier and a little more beautiful.
+          </p>
+          <p>
+            I hope this next year gives you reasons to laugh loudly, dreams worth
+            chasing, people who choose you, and moments you never want to forget.
+          </p>
+          <p class="signature">Happy Birthday, <span data-name>Jana</span>. ♥</p>
+        </div>
+
+        <button class="primary next-btn">There is still more →</button>
+      </div>
+    </section>
+
+    <!-- CHAPTER 5 -->
+    <section class="chapter" data-chapter="5">
+      <div class="chapter-inner center">
+        <div class="chapter-tag">Chapter 05</div>
+        <h2>Make a Wish</h2>
+        <p class="sub">Close your eyes for three seconds. Think of one thing you really want.</p>
+
+        <div class="wish-orbit">
+          <div class="wish-center">✨</div>
+          <i>♥</i><i>✦</i><i>♡</i><i>✧</i><i>♥</i><i>✦</i>
+        </div>
+
+        <button class="primary" id="wishBtn">I made my wish ✨</button>
+        <p id="wishResult" class="wish-result"></p>
+        <button class="primary next-btn hidden" id="wishNext">Final chapter →</button>
+      </div>
+    </section>
+
+    <!-- CHAPTER 6 -->
+    <section class="chapter" data-chapter="6">
+      <div class="chapter-inner center">
+        <div class="chapter-tag">Chapter 06</div>
+        <h2>And Now...</h2>
+        <p class="sub">The part where the screen gets a little brighter.</p>
+
+        <div class="cake-stage">
+          <div class="cake-glow"></div>
+          <div class="cake">🎂</div>
+          <div class="cake-candle">🕯️</div>
+        </div>
+
+        <h1 class="script birthday-title">Happy Birthday!</h1>
+        <p class="birthday-name" data-name>Jana</p>
+        <p class="final-line">May your year be full of beautiful surprises. 💗</p>
+
+        <button class="primary" id="celebrateBtn">Celebrate! 🎉</button>
+      </div>
+    </section>
+
+    <!-- FINAL -->
+    <section class="chapter" data-chapter="7">
+      <div class="chapter-inner center final-screen">
+        <div class="final-sparkle">✦</div>
+        <h1 class="script huge">Happy Birthday, <span data-name>Jana</span>!</h1>
+        <p class="lead">This little website ends here...</p>
+        <p class="lead strong">but the memories don't. ♥</p>
+        <div class="final-photo">
+          <img src="assets/final-photo.jpg" alt="Final memory" onerror="this.style.display='none'">
+          <span>Add your favorite photo</span>
+        </div>
+        <p class="from">Made with a ridiculous amount of love,<br><b>Your Name</b></p>
+        <button class="ghost" id="restartBtn">↻ Experience it again</button>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="reasonModal" class="modal">
+    <div class="modal-box">
+      <button class="close-modal">×</button>
+      <div class="modal-number" id="modalNumber">01</div>
+      <h3 id="modalTitle">Your smile</h3>
+      <p id="modalText">It changes the whole mood.</p>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
