@@ -128,10 +128,10 @@ setTimeout(resizeScratch,50);
 
 /* Reasons */
 const reasons={
-  "01":["Your smile","It changes the whole mood. Somehow one smile from you can turn a boring day into a memory."],
-  "02":["Your heart","You care deeply, even when you don't make a big deal about it. That's rare."],
-  "03":["Your chaos","Life is simply more fun when you're around. The random moments are usually the best ones."],
-  "04":["Your strength","You have made it through things that weren't easy, and you keep finding a way forward."]
+  "01":["Your smile","It changes the whole mood. Somehow one smile from you can turn a boring day into a memory.My absolute favorite view in the universe, and the only anchor I need."],
+  "02":["Your heart","You care deeply, even when you don't make a big deal about it. That's rare.A few little things that make you completely unforgettable to me."],
+  "03":["Your chaos","Life is simply more fun when you're around. The random moments are usually the best ones.Your beautiful, unfiltered, wild self. Every mood, laugh, and quirk makes me love you just a little bit more."],
+  "04":["Your strength","You have made it through things that weren't easy, and you keep finding a way forward.The quiet grace with which you fight your battles. You inspire me to be better every single day."]
 };
 const modal=document.getElementById("reasonModal");
 document.querySelectorAll(".reason").forEach(btn=>{
@@ -148,7 +148,7 @@ modal.addEventListener("click",e=>{if(e.target===modal)modal.classList.remove("s
 
 /* Wish */
 document.getElementById("wishBtn").addEventListener("click",()=>{
-  document.getElementById("wishResult").textContent="May this wish find its way to you. ✨";
+  document.getElementById("wishResult").textContent="May the stars carry your wish tonight, and may your heart always find exactly what it's searching for.✨";
   document.getElementById("wishNext").classList.remove("hidden");
   launchConfetti();
 });
